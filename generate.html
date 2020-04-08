@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generating...</title>
+</head>
+<body>
+    <div style="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+    <div style="display: None">
+        <form id="form-profile">
+            <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
+            <input type="text" id="field-lastname" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
+            <input type="text" inputmode="numeric" id="field-birthday" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
+            <input type="text" id="field-lieunaissance" name="lieunaissance" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
+            <input type="text" id="field-address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
+            <input type="text" id="field-town" name="town" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
+            <input type="number" min="00000" max="99999" id="field-zipcode" name="zipcode" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
+            <input type="checkbox" name="field-reason" id="checkbox-travail" value="travail">
+            <input type="checkbox" name="field-reason" id="checkbox-courses" value="courses">
+            <input type="checkbox" name="field-reason" id="checkbox-sante" value="sante">
+            <input type="checkbox" name="field-reason" id="checkbox-famille" value="famille">
+            <input type="checkbox" name="field-reason" id="checkbox-sport" value="sport">
+            <input type="checkbox" name="field-reason" id="checkbox-judiciaire" value="judiciaire">
+            <input type="checkbox" name="field-reason" id="checkbox-missions" value="missions">
+            <input type="date" id="field-datesortie" name="datesortie" placeholder="JJ/MM/YYYY" required="">
+            <input type="time" id="field-heuresortie" name="heure" required="">
+            <button type="submit" id="btn-attestation">done</button>
+            </p>
+        </form>
+    </div>
+    <p style="display: none" id="version">2020 - c35428a</p>
+</body>
+<script src="https://media.interieur.gouv.fr/deplacement-covid-19/certificate.c3e09903.js"></script>
+<script src="generate.js"></script>
+</html>
