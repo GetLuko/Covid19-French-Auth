@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
-
     document.getElementById("field-firstname").value = urlParams.get("f"); //firstname
     document.getElementById("field-lastname").value = urlParams.get("l"); //lastname
     document.getElementById("field-birthday").value = urlParams.get("b"); //birthday
