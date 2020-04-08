@@ -10,49 +10,42 @@
         Hello, you will create your link :
         <form id="form-profile">
             firstname
-            <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
+            <input type="text" id="first-name" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
             </br>
             lastname
-            <input type="text" id="field-lastname" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
+            <input type="text" id="last-name" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
             </br>
             birthday
-            <input type="text" inputmode="numeric" id="field-birthday" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
+            <input type="text" inputmode="numeric" id="birthdate" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
             </br>
             lieunaissance
-            <input type="text" id="field-lieunaissance" name="lieunaissance" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
+            <input type="text" id="birth-place" name="lieunaissance" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
             </br>
             address
-            <input type="text" id="field-address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
+            <input type="text" id="address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
             </br>
             town
-            <input type="text" id="field-town" name="town" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
+            <input type="text" id="city" name="town" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
             </br>
             zipcode
-            <input type="number" min="00000" max="99999" id="field-zipcode" name="zipcode" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
-            </br>
+            <input type="number" min="00000" max="99999" id="post-code" name="post-code" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
+            </br></br></br>
+
             REASON </br>
-            travail
-            <input type="radio" name="field-reason" id="checkbox-travail" value="work">
-            </br>
-            courses
-            <input type="radio" name="field-reason" id="checkbox-courses" value="buy">
-            </br>
-            sante
-            <input type="radio" name="field-reason" id="checkbox-sante" value="health">
-            </br>
-            famille
-            <input type="radio" name="field-reason" id="checkbox-famille" value="family">
-            </br>
-            sport
-            <input type="radio" name="field-reason" id="checkbox-sport" value="sport">
-            </br>
-            judiciaire
-            <input type="radio" name="field-reason" id="checkbox-judiciaire" value="legal">
-            </br>
-            missions
-            <input type="radio" name="field-reason" id="checkbox-missions" value="mission">
+            <select id="motive" name="motive">
+                <option value="0">Sélectionnez une raison...</option>
+                <option value="work">Travail</option>
+                <option value="sport">Sport</option>
+                <option value="buy">Courses</option>
+                <option value="health">Santé</option>
+                <option value="family">Famille</option>
+                <option value="sport">Judiciaire</option>
+                <option value="mission">Mission d’intérêt général</option>
+            </select>
         </form>
-        <a href="generate.html" id="generation-link">LINK TO GENERATE</a>
+        <div id="generation-link" class="attestation_url">
+            <a href="generate.html"></a>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>

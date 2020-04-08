@@ -1,29 +1,14 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    const all_input = document.querySelectorAll("input");
-    for (index = 0; index < all_input.length; ++index) {
-        all_input[index].addEventListener("focusin", refreshData);
-        all_input[index].addEventListener("change", refreshData);
-        all_input[index].addEventListener("input", refreshData);
-        all_input[index].addEventListener("focusout", refreshData);
-    }
-    refreshData();
-})
+
 function refreshData() {
-    const firstname = document.getElementById("field-firstname").value; //firstname
-    const lastname = document.getElementById("field-lastname").value; //lastname
-    const birthday = document.getElementById("field-birthday").value; //birthday
-    const lieunaissance = document.getElementById("field-lieunaissance").value; //place of born
-    const address = document.getElementById("field-address").value; //address
-    const town = document.getElementById("field-town").value; //city
-    const zipcode = document.getElementById("field-zipcode").value; //zipcode
-    var reason = null;
-    var radios = document.getElementsByName('field-reason');
-    for (var i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-            reason = radios[i].value;
-            break;
-        }
-    }
+    const firstname = document.getElementById("first-name").value; //firstname
+    const lastname = document.getElementById("last-name").value; //lastname
+    const birthday = document.getElementById("birthdate").value; //birthday
+    const lieunaissance = document.getElementById("birth-place").value; //place of born
+    const address = document.getElementById("address").value; //address
+    const town = document.getElementById("city").value; //city
+    const zipcode = document.getElementById("post-code").value; //zipcode
+    var   reason = document.getElementById('motive').value;
+
     var data = {
         f: firstname,
         l: lastname,
@@ -34,8 +19,8 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    document.getElementById("generation-link").href = window.location.origin + "/generate.html?" + serialize(data);
-    document.getElementById("generation-link").innerText = window.location.origin + "/generate.html?" + serialize(data);
+    document.querySelector("#url-generate > a").href = "https://covid.luko.eu/generate.html?" + serialize(data);
+    document.querySelector("#url-generate > a").innerText = "https://covid.luko.eu/generate.html?" + serialize(data);
 }
 
 function serialize(obj) {
