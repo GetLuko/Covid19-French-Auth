@@ -19,8 +19,8 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    document.querySelector("#url-generate > a").href = "https://covid.luko.eu/generate.html#" + serialize(data);
-    document.querySelector("#url-generate > a").innerText = "https://covid.luko.eu/generate.html#" + serialize(data);
+    document.querySelector("#generation-link > a").href = window.location.origin + "/generate.html#" + serialize(data);
+    document.querySelector("#generation-link > a").innerText = window.location.origin + "/generate.html#" + serialize(data);
 }
 
 function serialize(obj) {

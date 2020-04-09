@@ -1,3 +1,5 @@
+// This is an adaptation onf demo.js for the much beatifull website : https://www.luko.eu/fr/page/covid19attestation
+
 
 function refreshData() {
     const firstname = document.getElementById("first-name").value; //firstname
