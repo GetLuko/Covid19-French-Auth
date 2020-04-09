@@ -17,6 +17,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("checkbox-sport").checked = (reason==='sport');
     document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
     document.getElementById("checkbox-missions").checked = (reason==='mission');
-    document.getElementById("btn-attestation").click()
+    document.getElementById("generate-btn").click()
 });
 
