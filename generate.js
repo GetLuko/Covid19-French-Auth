@@ -1,6 +1,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    var data = window.location.hash.substr(1);
+    if(!data){
+        // Stay compatible with previous version search param
+        data = window.location.search;
+    }
+    console.log(data)
+    const urlParams = new URLSearchParams(data);
 
     document.getElementById("field-firstname").value = urlParams.get("f"); //firstname
     document.getElementById("field-lastname").value = urlParams.get("l"); //lastname
