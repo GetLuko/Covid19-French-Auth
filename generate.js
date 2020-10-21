@@ -15,13 +15,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-town").value = urlParams.get("c"); //city
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
     const reason = urlParams.get("r"); //reason
-    document.getElementById("checkbox-travail").checked = (reason==='work');
-    document.getElementById("checkbox-courses").checked = (reason==='buy');
-    document.getElementById("checkbox-sante").checked = (reason==='health');
-    document.getElementById("checkbox-famille").checked = (reason==='family');
-    document.getElementById("checkbox-sport").checked = (reason==='sport');
-    document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
-    document.getElementById("checkbox-missions").checked = (reason==='mission');
+    document.getElementById("radio-travail").checked = (reason==='travail');
+    document.getElementById("radio-sante").checked = (reason==='sante');
+    document.getElementById("radio-famille").checked = (reason==='famille');
+    document.getElementById("radio-handicap").checked = (reason==='handicap');
+    document.getElementById("radio-convocation").checked = (reason==='convocation');
+    document.getElementById("radio-missions").checked = (reason==='missions');
+    document.getElementById("radio-transits").checked = (reason==='transits');
+    document.getElementById("radio-animaux").checked = (reason==='animaux');
+
+    var now = new Date()
+    document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
+    document.getElementById('field-heuresortie').value = now.getHours()+":"+now.getMinutes();
+
+
     document.getElementById("generate-btn").click()
 });
 
