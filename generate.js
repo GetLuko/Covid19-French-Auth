@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-famille").checked = (reason==='famille');
     document.getElementById("radio-handicap").checked = (reason==='handicap');
     document.getElementById("radio-convocation").checked = (reason==='convocation');
+    document.getElementById("radio-missions").checked = (reason==='missions');
 
     var now = new Date()
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
