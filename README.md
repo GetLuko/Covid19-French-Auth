@@ -33,7 +33,7 @@ Open source demo : https://covid.luko.eu/demo.html
 
 ## Todo :  
 - [ ] follow upgrade on js file on gouv.fr website 
-- [ ] use a local version of certificate.js as a fail-safe solution
+- [x] use a local version of certificate.js as a fail-safe solution
 - [x] Move from url query param to anchor param (to ensure that server have no access to data)
 
 ## Credit
