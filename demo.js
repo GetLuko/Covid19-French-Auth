@@ -7,6 +7,7 @@ function refreshData() {
     const address = document.getElementById("address").value; //address
     const town = document.getElementById("city").value; //city
     const zipcode = document.getElementById("post-code").value; //zipcode
+    var   gendate = document.getElementById('gendate').value; //gendate
     var   reason = document.getElementById('motive').value;
 
     var data = {
@@ -17,7 +18,8 @@ function refreshData() {
         a: address,
         c: town,
         z: zipcode,
-        r: reason
+        r: reason,
+        g: gendate
     }
     document.querySelector("#generation-link > a").href = window.location.origin + "/generate.html#" + serialize(data);
     document.querySelector("#generation-link > a").innerText = window.location.origin + "/generate.html#" + serialize(data);

@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-missions").checked = (reason==='missions');
 
     var now = new Date()
+    now.setSeconds(now.getSeconds() - urlParams.get("g"));
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
     document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
     setTimeout(() => {
