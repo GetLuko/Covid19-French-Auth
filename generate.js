@@ -4,9 +4,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         // Stay compatible with previous version search param
         data = window.location.search;
     }
-    console.log(data)
     const urlParams = new URLSearchParams(data);
-
     document.getElementById("field-firstname").value = urlParams.get("f"); //firstname
     document.getElementById("field-lastname").value = urlParams.get("l"); //lastname
     document.getElementById("field-birthday").value = urlParams.get("b"); //birthday
@@ -14,6 +12,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-address").value = urlParams.get("a"); //address
     document.getElementById("field-city").value = urlParams.get("c"); //city
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
+
     const reason = urlParams.get("r"); //reason
     document.getElementById("radio-travail").checked = (reason==='travail');
     document.getElementById("radio-achats").checked = (reason==='achats');
@@ -26,8 +25,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     var now = new Date()
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
-    document.getElementById('field-heuresortie').value = now.toJSON().slice(11,16);
-
+    document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
 
     document.getElementById("generate-btn").click()
 });
