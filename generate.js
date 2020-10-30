@@ -27,7 +27,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     var now = new Date()
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
     document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
-
-    document.getElementById("generate-btn").click()
+    setTimeout(() => {
+        document.getElementById("generate-btn").click()
+    }, 500)
 });
 
+function badScriptLoading(event) {
+    console.log("Official JS is not working. Patching using local copy.")
+    let script = document.createElement('script');
+    script.src = "deplacement-covid-19/main.d56e3230.js";
+    document.head.append(script)
+}
