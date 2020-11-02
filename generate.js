@@ -34,6 +34,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("loading").style.display = "none"
         document.getElementById("done").style.display = "block"
     }, 1500)
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none"
+        if (isFacebookBrowser()) {
+            document.getElementById("facebook").style.display = "block"
+        } else {
+            document.getElementById("done").style.display = "block"
+        }
+    }, 1500)
 });
 
 function badScriptLoading(event) {
@@ -42,3 +50,9 @@ function badScriptLoading(event) {
     script.src = "deplacement-covid-19/main.d56e3230.js";
     document.head.append(script)
 }
+
+function isFacebookBrowser () {
+    const ua = navigator.userAgent || navigator.vendor || window.opera
+    return ua.indexOf('FBAN') !== -1 || ua.indexOf('FBAV') !== -1
+}
+  
