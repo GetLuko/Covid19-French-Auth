@@ -6,12 +6,16 @@
     <title>Générateur d'attestation</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
+        html, 
+        body {
+            height: 100%;
+        }
+
         body {
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: sans-serif;
-            height: 100vh;
             width: 100%;
             margin: 0;
             padding: 24px;
@@ -57,6 +61,11 @@
     <div id="done" style="display: none;">
         <h1>Attestation générée</h1>
         <p>Rendez-vous dans vos téléchargements.</p>
+    </div>
+
+    <div id="facebook" style="display: none;">
+        <h1>Attention !</h1>
+        <p>Vous utilisez actuellement le navigateur Facebook, ce générateur ne fonctionne pas correctement au sein de ce navigateur ! Merci d'ouvrir Chrome sur Android ou bien Safari sur iOS.</p>
     </div>
 
     <script src="https://media.interieur.gouv.fr/deplacement-covid-19/main.d56e3230.js" onerror="badScriptLoading()"></script>
