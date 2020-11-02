@@ -30,6 +30,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     setTimeout(() => {
         document.getElementById("generate-btn").click()
     }, 500)
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none"
+        document.getElementById("done").style.display = "block"
+    }, 1500)
 });
 
 function badScriptLoading(event) {

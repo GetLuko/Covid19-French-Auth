@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generating...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Générateur d'attestation</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 24px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <script src="generate.js"></script>
-    <div style="display: block; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+    <div id="loading" style="text-align: center;">
+        <h1>Génération en cours...</h1>
+        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif" />
+    </div>
     <div style="display: none">
         <form id="form-profile">
             <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
@@ -32,8 +49,16 @@
             <div id="generate-btn">done</div>
             <div id="reason-fieldset"><div class="msg-alert"></div></div>
         </form>
+        <div id="reload-btn"></div>
+        <div id="snackbar"></div>
     </div>
     <p style="display: none" id="version">2020 - c35428a</p>
+
+    <div id="done" style="display: none;">
+        <h1>Attestation générée</h1>
+        <p>Rendez-vous dans vos téléchargements.</p>
+    </div>
+
     <script src="https://media.interieur.gouv.fr/deplacement-covid-19/main.d56e3230.js" onerror="badScriptLoading()"></script>
 </body>
 </html>
