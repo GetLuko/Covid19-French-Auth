@@ -42,6 +42,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
             document.getElementById("done").style.display = "block"
         }
     }, 1500)
+    setTimeout(() => {
+        window.close();
+    }, 5000)
 });
 
 function badScriptLoading(event) {
