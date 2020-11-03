@@ -26,7 +26,11 @@ function refreshData() {
 
     document.querySelector("#url-generate > a").href = link;
     document.querySelector("#url-generate > a").innerText = link;
-    document.getElementById("copy-btn").click(copy(link));
+
+    var copybutton = document.getElementById("copy-btn")
+    if (copybutton) {
+        copybutton.click(copy(link));
+    }
 }
 
 function serialize(obj) {
