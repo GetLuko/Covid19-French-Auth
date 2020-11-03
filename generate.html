@@ -21,7 +21,11 @@
             text-align: center;
         }
 
-        @media (min-width: 400px) {
+        p {
+            padding: 24px;
+        }
+
+        @media (min-width: 480px) {
             #close-btn {
                 display: none;
             }
@@ -65,7 +69,7 @@
 
     <div id="done" style="display: none;">
         <h1>Attestation générée</h1>
-        <p>Rendez-vous dans vos téléchargements.</p>
+        <p>Rendez-vous dans vos téléchargements et ajoutez cette page en favoris pour la prochaine sortie.</p>
         <button id="close-btn" onclick="window.close()">Fermer cette page</button>
     </div>
 
