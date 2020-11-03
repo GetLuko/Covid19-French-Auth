@@ -18,8 +18,13 @@
             font-family: sans-serif;
             width: 100%;
             margin: 0;
-            padding: 24px;
             text-align: center;
+        }
+
+        @media (min-width: 400px) {
+            #close-btn {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -61,6 +66,7 @@
     <div id="done" style="display: none;">
         <h1>Attestation générée</h1>
         <p>Rendez-vous dans vos téléchargements.</p>
+        <button id="close-btn" onclick="window.close()">Fermer cette page</button>
     </div>
 
     <div id="facebook" style="display: none;">

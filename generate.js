@@ -32,19 +32,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }, 500)
     setTimeout(() => {
         document.getElementById("loading").style.display = "none"
-        document.getElementById("done").style.display = "block"
-    }, 1500)
-    setTimeout(() => {
-        document.getElementById("loading").style.display = "none"
         if (isFacebookBrowser()) {
             document.getElementById("facebook").style.display = "block"
         } else {
             document.getElementById("done").style.display = "block"
         }
     }, 1500)
-    setTimeout(() => {
-        window.close();
-    }, 5000)
 });
 
 function badScriptLoading(event) {
