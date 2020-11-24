@@ -21,8 +21,16 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    document.querySelector("#url-generate > a").href = "https://covid.luko.eu/generate.html#" + serialize(data);
-    document.querySelector("#url-generate > a").innerText = "https://covid.luko.eu/generate.html#" + serialize(data);
+
+    var link = "https://covid.luko.eu/generate.html#" + serialize(data);
+
+    document.querySelector("#url-generate > a").href = link;
+    document.querySelector("#url-generate > a").innerText = link;
+
+    var copybutton = document.getElementById("copy-btn")
+    if (copybutton) {
+        copybutton.click(copy(link));
+    }
 }
 
 function serialize(obj) {
@@ -36,6 +44,19 @@ function formSubmit(evt) {
     evt.preventDefault();
     refreshData();
     document.getElementById('div-url-generate').style.display = 'block';
+}
+
+function copy(value) {
+    const textarea = document.createElement('textarea')
+    const x = window.scrollX
+    const y = window.scrollY
+    textarea.value = value
+    document.body.appendChild(textarea)
+    textarea.focus()
+    window.scrollTo(x, y)
+    textarea.setSelectionRange(0, textarea.value.length)
+    document.execCommand('copy')
+    document.body.removeChild(textarea)
 }
 
 setTimeout(function () {

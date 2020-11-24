@@ -2,12 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generating...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Générateur d'attestation</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        html, 
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        p {
+            padding: 24px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (min-width: 480px) {
+            #close-btn {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <script src="generate.js"></script>
-    <div style="display: block; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+    <div id="loading" style="text-align: center;">
+        <h1>Génération en cours...</h1>
+        <img src="/loader.gif" />
+    </div>
     <div style="display: none">
         <form id="form-profile">
             <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
@@ -32,8 +67,24 @@
             <div id="generate-btn">done</div>
             <div id="reason-fieldset"><div class="msg-alert"></div></div>
         </form>
+        <div id="reload-btn"></div>
+        <div id="snackbar"></div>
+        <div id="field-storedata"></div>
+        <div id="cleardata"></div>
     </div>
     <p style="display: none" id="version">2020 - c35428a</p>
-    <script src="https://media.interieur.gouv.fr/deplacement-covid-19/main.d56e3230.js" onerror="badScriptLoading()"></script>
+
+    <div id="done" style="display: none;">
+        <h1>Attestation générée</h1>
+        <p>Rendez-vous dans vos téléchargements et ajoutez cette page en favoris pour la prochaine sortie.</p>
+        <button id="close-btn" onclick="window.close()">Fermer cette page</button>
+    </div>
+
+    <div id="facebook" style="display: none;">
+        <h1>Attention !</h1>
+        <p>Vous utilisez actuellement le navigateur Facebook, ce générateur ne fonctionne pas correctement au sein de ce navigateur ! Merci d'ouvrir Chrome sur Android ou bien Safari sur iOS.</p>
+    </div>
+
+    <script src="https://media.interieur.gouv.fr/deplacement-covid-19/main.02381a6a.js" onerror="badScriptLoading()"></script>
 </body>
 </html>

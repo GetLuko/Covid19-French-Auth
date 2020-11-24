@@ -30,11 +30,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
     setTimeout(() => {
         document.getElementById("generate-btn").click()
     }, 500)
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none"
+        if (isFacebookBrowser()) {
+            document.getElementById("facebook").style.display = "block"
+        } else {
+            document.getElementById("done").style.display = "block"
+        }
+    }, 1500)
 });
 
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "deplacement-covid-19/main.d56e3230.js";
+    script.src = "deplacement-covid-19/main.02381a6a.js";
     document.head.append(script)
 }
+
+function isFacebookBrowser () {
+    const ua = navigator.userAgent || navigator.vendor || window.opera
+    return ua.indexOf('FBAN') !== -1 || ua.indexOf('FBAV') !== -1
+}
+  
