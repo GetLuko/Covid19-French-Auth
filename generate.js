@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     const reason = urlParams.get("r"); //reason
     document.getElementById("radio-travail").checked = (reason==='travail');
-    document.getElementById("radio-achats_culturel_cultuel").checked = (reason==='achats_culturel_cultuel');
+    document.getElementById("radio-achats_culturel_cultuel").checked = (reason==='achats_culturel_cultuel') || (reason==='achats') ;
     document.getElementById("radio-enfants").checked = (reason==='enfants');
     document.getElementById("radio-sport_animaux").checked = (reason==='sport_animaux');
     document.getElementById("radio-sante").checked = (reason==='sante');
