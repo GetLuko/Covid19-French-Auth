@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     const reason = urlParams.get("r"); //reason
     document.getElementById("radio-travail").checked = (reason==='travail');
-    document.getElementById("radio-achats").checked = (reason==='achats');
+    document.getElementById("radio-achats_culturel_cultuel").checked = (reason==='achats_culturel_cultuel') || (reason==='achats') ;
     document.getElementById("radio-enfants").checked = (reason==='enfants');
     document.getElementById("radio-sport_animaux").checked = (reason==='sport_animaux');
     document.getElementById("radio-sante").checked = (reason==='sante');
@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "deplacement-covid-19/main.02381a6a.js";
+    script.src = "deplacement-covid-19/main.833af409.js";
     document.head.append(script)
 }
 
@@ -51,4 +51,4 @@ function isFacebookBrowser () {
     const ua = navigator.userAgent || navigator.vendor || window.opera
     return ua.indexOf('FBAN') !== -1 || ua.indexOf('FBAV') !== -1
 }
-  
+
