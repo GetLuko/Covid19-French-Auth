@@ -15,14 +15,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     const reason = urlParams.get("r"); //reason
     document.getElementById("radio-travail").checked = (reason==='travail');
-    document.getElementById("radio-achats_culturel_cultuel").checked = (reason==='achats_culturel_cultuel') || (reason==='achats') ;
-    document.getElementById("radio-enfants").checked = (reason==='enfants');
-    document.getElementById("radio-sport_animaux").checked = (reason==='sport_animaux');
     document.getElementById("radio-sante").checked = (reason==='sante');
     document.getElementById("radio-famille").checked = (reason==='famille');
     document.getElementById("radio-handicap").checked = (reason==='handicap');
     document.getElementById("radio-convocation").checked = (reason==='convocation');
     document.getElementById("radio-missions").checked = (reason==='missions');
+    document.getElementById("radio-transits").checked = (reason==='transits');
+    document.getElementById("radio-animaux").checked = (reason==='animaux');
 
     var now = new Date()
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
@@ -43,7 +42,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "deplacement-covid-19/main.833af409.js";
+    script.src = "attestation-couvre-feu-covid-19/main.723caca0.js";
     document.head.append(script)
 }
 
