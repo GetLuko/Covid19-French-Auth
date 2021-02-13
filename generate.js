@@ -24,8 +24,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-animaux").checked = (reason==='animaux');
 
     var now = new Date()
+    var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/Paris"
+
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
-    document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
+    document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: timeZone
+        , hour: "2-digit", minute: "2-digit", hour12: false});
     setTimeout(() => {
         document.getElementById("generate-btn").click()
     }, 500)
