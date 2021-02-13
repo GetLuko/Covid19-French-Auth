@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "attestation-couvre-feu-covid-19/main.78cbd57b.js";
+    script.src = "attestation-couvre-feu-covid-19/main.36f6dadf.js";
     document.head.append(script)
 }
 
