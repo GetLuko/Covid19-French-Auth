@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Générateur d'attestation</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        p {
+            padding: 24px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (min-width: 480px) {
+            #close-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="generate.js"></script>
+    <div id="loading" style="text-align: center;">
+        <h1>Génération en cours...</h1>
+        <img src="https://raw.githubusercontent.com/GetLuko/Covid19-French-Auth/master/loader.gif" />
+    </div>
+    <div style="display: none">
+        <form id="form-profile">
+            <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
+            <input type="text" id="field-lastname" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
+            <input type="text" inputmode="numeric" id="field-birthday" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
+            <input type="text" id="field-placeofbirth" name="placeofbirth" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
+            <input type="text" id="field-address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
+            <input type="text" id="field-city" name="city" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
+            <input type="number" min="00000" max="99999" id="field-zipcode" name="zipcode" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
+            <input type="radio" name="field-reason" id="radio-travail" value="travail">
+            <input type="radio" name="field-reason" id="radio-sante" value="sante">
+            <input type="radio" name="field-reason" id="radio-famille" value="famille">
+            <input type="radio" name="field-reason" id="radio-handicap" value="handicap">
+            <input type="radio" name="field-reason" id="radio-convocation" value="convocation">
+            <input type="radio" name="field-reason" id="radio-missions" value="missions">
+            <input type="radio" name="field-reason" id="radio-transits" value="transits">
+            <input type="radio" name="field-reason" id="radio-animaux" value="animaux">
+
+            <input type="date" id="field-datesortie" name="datesortie" placeholder="JJ/MM/YYYY" required="">
+            <input type="time" id="field-heuresortie" name="heure" required="">
+            <div id="generate-btn">done</div>
+            <div id="reason-fieldset"><div class="msg-alert"></div></div>
+        </form>
+        <div id="reload-btn"></div>
+        <div id="snackbar"></div>
+        <div id="field-storedata"></div>
+        <div id="cleardata"></div>
+    </div>
+    <p style="display: none" id="version">2020 - c35428a</p>
+
+    <div id="done" style="display: none;">
+        <h1>Attestation générée</h1>
+        <p>Rendez-vous dans vos téléchargements et ajoutez cette page en favoris pour la prochaine sortie.</p>
+        <button id="close-btn" onclick="window.close()">Fermer cette page</button>
+    </div>
+
+    <div id="facebook" style="display: none;">
+        <h1>Attention !</h1>
+        <p>Vous utilisez actuellement le navigateur Facebook, ce générateur ne fonctionne pas correctement au sein de ce navigateur ! Merci d'ouvrir Chrome sur Android ou bien Safari sur iOS.</p>
+    </div>
+
+    <script src="https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/main.36f6dadf.js" onerror="badScriptLoading()"></script>
+</body>
+</html>
