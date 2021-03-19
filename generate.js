@@ -24,6 +24,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-animaux").checked = (reason==='animaux');
 
     var now = new Date()
+    if (urlParams.has("t")) {
+        const timedelta = urlParams.get("t"); //timedelta (in minutes)
+        now = new Date(now - timedelta * 60000)
+    }
     var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/Paris"
 
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
