@@ -1,24 +1,23 @@
 # Covid19-French-Auth
 
-⚠️By respect to our medical staff, please respect the social distancing, the governement rules and the barrier gestures.⚠️
+⚠️ By respect to our medical staff, please respect the social distancing, the governement rules and the barrier gestures. ⚠️
 
-The goal of this project is to be able to generate the "ATTESTATION DE DÉPLACEMENT DÉROGATOIRE" from the French Government.  
-See https://media.interieur.gouv.fr/deplacement-covid-19/
+This project allows on-the-fly generation of French Government "attestation de déplacement". See [https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/](https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/)
 
-This is a pure Vanilla JS implementation. No need to compile anything. Run out-of-the-box.
+As pure Vanilla JS project, it runs out of the box without compilation.
 
-No data are sent to the server. Everything is run locally on your browser.
+For data privacy reasons, the certificate generation is done locally in the browser without sending data to a server.
 
 ## How it works ?
 
-The file : generate.html is in charge of generate the PDF  
-From the url hanchor parameter, it retrieves the profil (firstname, lastname, etc...). Then, this profil is injected in a hidden form that is similar to the one on Official Website.     
-Then, the official `certificate.js` script from official website is called to compile the PDF using the data store on the hidden form.  
+`generate.html` is in charge of the PDF generation
+Profile is constructed from the query string (firstname, lastname, etc...). Then, this profile is injected in a hidden form that is similar to the one on the Government official website.
+Then, the official `certificate.js` script from the official website is called to compile the PDF using the data stored in the hidden form.
 
 ## Demo :
 
-Beautifull version : https://www.luko.eu/fr/page/covid19attestation  
-Open source demo : https://covid.luko.eu/demo.html
+Beautiful version : [https://www.luko.eu/fr/page/covid19attestation](https://www.luko.eu/fr/page/covid19attestation)
+Open source demo : [https://covid.luko.eu/demo.html](https://covid.luko.eu/demo.html)
 
 ## Installation :
 
@@ -38,7 +37,7 @@ Open source demo : https://covid.luko.eu/demo.html
 
 ## Credit
 
- * Official website code source : used for `certificate.js` : https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020
+ * Official website code source : used for `certificate.js` : [https://github.com/LAB-MI/attestation-deplacement-derogatoire-covid-19](https://github.com/LAB-MI/attestation-deplacement-derogatoire-covid-19)
  * Inspired by : 
     * https://twitter.com/Kamidh/status/1247570275442601984
     *  https://www.igen.fr/ios/2020/04/un-raccourci-pour-generer-lattestation-de-deplacement-derogatoire-numerique-114133
