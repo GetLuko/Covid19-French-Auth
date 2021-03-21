@@ -32,16 +32,33 @@
             </br></br></br>
 
             REASON </br>
+
             <select id="motive" name="motive">
-                <option value="0">Sélectionnez une raison...</option>
-                <option value="travail">travail</option>
-                <option value="sante">sante</option>
-                <option value="famille">famille</option>
-                <option value="handicap">handicap</option>
-                <option value="convocation">convocation</option>
-                <option value="missions">missions</option>
-                <option value="transits">transits</option>
-                <option value="animaux">animaux</option>
+                <option disabled selected>Sélectionnez une raison...</option>
+                <optgroup label="Couvre-feu">
+                    <option value="curfew-travail">travail</option>
+                    <option value="curfew-sante">sante</option>
+                    <option value="curfew-famille">famille</option>
+                    <option value="curfew-handicap">handicap</option>
+                    <option value="curfew-judiciaire">judiciaire</option>
+                    <option value="curfew-missions">missions</option>
+                    <option value="curfew-transit">transit</option>
+                    <option value="curfew-animaux">animaux</option>
+                </optgroup>
+                <optgroup label="Journée">
+                    <option value="quarantine-sport">sport/promenade</option>
+                    <option value="quarantine-achats">achats</option>
+                    <option value="quarantine-enfants">enfants</option>
+                    <option value="quarantine-culte_culturel">culte/culturel</option>
+                    <option value="quarantine-demarche">demarche</option>
+                    <option value="quarantine-travail">travail</option>
+                    <option value="quarantine-sante">sante</option>
+                    <option value="quarantine-famille">famille</option>
+                    <option value="quarantine-handicap">handicap</option>
+                    <option value="quarantine-judiciaire">judiciaire</option>
+                    <option value="quarantine-demenagement">demenagement</option>
+                    <option value="quarantine-transit">transit</option>
+                </optgroup>
             </select>
         </form>
         <button onclick="refreshData()">Valider</button>
