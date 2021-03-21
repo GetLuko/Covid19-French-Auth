@@ -70,7 +70,7 @@ document.getElementById('url-generate').style.overflowWrap = "break-word";
 
 const motiveOptions = `<select id="motive" name="motive">
 <option disabled selected>Sélectionnez une raison...</option>
-<optgroup label="Couvre-feu">
+<optgroup label="Couvre-feu (19h-6h)">
     <option value="curfew-travail">Activité professionnelle, enseignement et formation</option>
     <option value="curfew-sante">Consultation et soins</option>
     <option value="curfew-famille">Motif familial impérieux, personnes vulnérables ou précaires ou gardes d’enfants</option>
@@ -80,7 +80,7 @@ const motiveOptions = `<select id="motive" name="motive">
     <option value="curfew-transit">Déplacements de transit et longue distance</option>
     <option value="curfew-animaux">Animaux de compagnie</option>
 </optgroup>
-<optgroup label="Journée">
+<optgroup label="Journée (6h-19h)">
     <option value="quarantine-sport">Activité physique et promenade</option>
     <option value="quarantine-achats">Achats</option>
     <option value="quarantine-enfants">Accompagnement des enfants à l’école</option>
