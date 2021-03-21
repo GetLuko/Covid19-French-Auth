@@ -43,6 +43,7 @@
         <h1>Génération en cours...</h1>
         <img src="https://raw.githubusercontent.com/GetLuko/Covid19-French-Auth/master/loader.gif" />
     </div>
+
     <div style="display: none">
         <form id="form-profile">
             <input type="text" id="field-firstname" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
@@ -61,6 +62,15 @@
             <input type="radio" name="field-reason" id="radio-transits" value="transits">
             <input type="radio" name="field-reason" id="radio-animaux" value="animaux">
 
+            <input type="radio" name="field-reason" id="radio-sport" value="sport">
+            <input type="radio" name="field-reason" id="radio-achats" value="achats">
+            <input type="radio" name="field-reason" id="radio-enfants" value="enfants">
+            <input type="radio" name="field-reason" id="radio-culte_culturel" value="culte_culturel">
+            <input type="radio" name="field-reason" id="radio-demarche" value="demarche">
+            <input type="radio" name="field-reason" id="radio-judiciaire" value="judiciaire">
+            <input type="radio" name="field-reason" id="radio-demenagement" value="demenagement">
+            <input type="radio" name="field-reason" id="radio-transit" value="transit">
+
             <input type="date" id="field-datesortie" name="datesortie" placeholder="JJ/MM/YYYY" required="">
             <input type="time" id="field-heuresortie" name="heure" required="">
             <div id="generate-btn">done</div>
@@ -71,7 +81,16 @@
         <div id="field-storedata"></div>
         <div id="cleardata"></div>
     </div>
-    <p style="display: none" id="version">2020 - c35428a</p>
+
+    <div style="display: none" class="context-wrapper">
+        <button id="curfew-button" class="context-button curfew-button"></button>
+        <button id="quarantine-button" class="context-button quarantine-button"></button>
+    </div>
+    <div style="display: none" class="fieldset-wrapper curfew-subtitle quarantine-subtitle"></div>
+    <div id="quarantine-reason-fieldset" style="display: none"></div>
+    <div id="curfew-reason-fieldset" style="display: none"></div>
+
+    <p style="display: none" id="version">2021 - 2.4.0</p>
 
     <div id="done" style="display: none;">
         <h1>Attestation générée</h1>
@@ -84,6 +103,6 @@
         <p>Vous utilisez actuellement le navigateur Facebook, ce générateur ne fonctionne pas correctement au sein de ce navigateur ! Merci d'ouvrir Chrome sur Android ou bien Safari sur iOS.</p>
     </div>
 
-    <script src="https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/main.36f6dadf.js" onerror="badScriptLoading()"></script>
+    <script src="https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/main.561be803.js" onerror="badScriptLoading()"></script>
 </body>
 </html>
