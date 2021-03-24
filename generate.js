@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-city").value = urlParams.get("c"); //city
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
 
-    let reason = urlParams.get("r"); //reason
+    let reason = urlParams.get("r");
     const isQuarantine = reason.indexOf("quarantine-") !== -1;
     reason = reason.replace(/curfew-|quarantine-/, '')
     if (isQuarantine) {
@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "attestation-deplacement-derogatoire-covid-19/main.561be803.js";
+    script.src = "attestation-deplacement-derogatoire-covid-19/main.6f41a917.js";
     document.head.append(script)
 }
 
