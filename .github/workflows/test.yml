@@ -9,6 +9,8 @@ jobs:
   run_tests:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
       - uses: microsoft/playwright-github-action@v1
-      - uses: ./
-      - run: yarn test
+      - name: Install dependencies and run tests
+        run: yarn && yarn test
