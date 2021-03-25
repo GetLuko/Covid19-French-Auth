@@ -1,5 +1,7 @@
-name: Run tests
+name: Tests
 on:
+  push:
+    branches: [ master ]
   schedule:
     - cron: "*/5 * * * *"
 
@@ -8,5 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: microsoft/playwright-github-action@v1
-      - name: Run your tests
-        run: yarn test
+      - run: yarn test
