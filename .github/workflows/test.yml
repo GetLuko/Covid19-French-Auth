@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: microsoft/playwright-github-action@v1
+      - uses: ./
       - run: yarn test
