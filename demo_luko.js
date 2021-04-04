@@ -71,28 +71,20 @@ document.getElementById('url-generate').style.overflowWrap = "break-word";
 const motiveOptions = `<select id="motive" name="motive">
 <option disabled selected>Sélectionnez une raison...</option>
 <optgroup label="Couvre-feu (19h-6h)">
-    <option value="curfew-travail">Activité professionnelle, enseignement et formation</option>
-    <option value="curfew-sante">Consultation et soins</option>
-    <option value="curfew-famille">Motif familial impérieux, personnes vulnérables ou précaires ou gardes d’enfants</option>
-    <option value="curfew-handicap">Situation de handicap</option>
-    <option value="curfew-judiciaire">Convocation judiciaire ou administrative</option>
-    <option value="curfew-missions">Mission d’intérêt général</option>
-    <option value="curfew-transit">Déplacements de transit et longue distance</option>
-    <option value="curfew-animaux">Animaux de compagnie</option>
+    <option value="curfew-travail">Activité professionnelle, enseignement et formation, mission d’intérêt général</option>
+    <option value="curfew-sante">Santé (consultation et soins)</option>
+    <option value="curfew-famille">Motif familial impérieux, assistance aux personnes vulnérables, garde d’enfants, situation de handicap</option>
+    <option value="curfew-convocation_demarches">Convocation judiciaire ou administrative, démarches ne pouvant être menées à distance</option>
+    <option value="curfew-animaux">Animaux de compagnie, le soir et la nuit</option>
 </optgroup>
 <optgroup label="Journée (6h-19h)">
-    <option value="quarantine-sport">Activité physique et promenade</option>
-    <option value="quarantine-achats">Achats</option>
-    <option value="quarantine-enfants">Accompagnement des enfants à l’école</option>
-    <option value="quarantine-culte_culturel">Etablissement culturel ou lieu de culte</option>
-    <option value="quarantine-demarche">Démarches administratives ou juridiques</option>
     <option value="quarantine-travail">Activité professionnelle, enseignement et formation, mission d’intérêt général</option>
-    <option value="quarantine-sante">Santé (consultations et soins)</option>
-    <option value="quarantine-famille">Motif familial impérieux, personnes vulnérables ou précaires ou gardes d’enfants</option>
-    <option value="quarantine-handicap">Situation de handicap</option>
-    <option value="quarantine-judiciaire">Convocation judiciaire ou administrative</option>
+    <option value="quarantine-sante">Santé (consultation et soins)</option>
+    <option value="quarantine-famille">Motif familial impérieux, assistance aux personnes vulnérables, garde d’enfants, situation de handicap</option>
+    <option value="quarantine-convocation_demarches">Convocation judiciaire ou administrative, démarches ne pouvant être menées à distance</option>
     <option value="quarantine-demenagement">Déménagement</option>
-    <option value="quarantine-transit">Déplacement de transit vers les gares et les aéroports</option>
+    <option value="quarantine-achats_culte_culturel">Achats, établissements culturels ou lieux de culte</option>
+    <option value="quarantine-sport">Activité physique, de plein air, promenade</option>
 </optgroup>
 </select>`
 

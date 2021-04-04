@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-famille").checked = (reason==='famille');
     document.getElementById("radio-handicap").checked = (reason==='handicap');
     document.getElementById("radio-convocation").checked = (reason==='convocation');
+    document.getElementById("radio-convocation_demarches").checked = (reason==='convocation_demarches');
     document.getElementById("radio-missions").checked = (reason==='missions');
     document.getElementById("radio-transits").checked = (reason==='transits');
     document.getElementById("radio-animaux").checked = (reason==='animaux');
@@ -35,6 +36,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("radio-achats").checked = (reason==='achats');
     document.getElementById("radio-enfants").checked = (reason==='enfants');
     document.getElementById("radio-culte_culturel").checked = (reason==='culte_culturel');
+    document.getElementById("radio-achats_culte_culturel").checked = (reason==='achats_culte_culturel');
     document.getElementById("radio-demarche").checked = (reason==='demarche');
     document.getElementById("radio-judiciaire").checked = (reason==='judiciaire');
     document.getElementById("radio-demenagement").checked = (reason==='demenagement');
@@ -62,7 +64,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "attestation-deplacement-derogatoire-covid-19/main.6f41a917.js";
+    script.src = "attestation-deplacement-derogatoire-covid-19/main.04e45f58.js";
     document.head.append(script)
 }
 
