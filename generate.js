@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
     console.log("Official JS is not working. Patching using local copy.")
     let script = document.createElement('script');
-    script.src = "attestation-deplacement-derogatoire-covid-19/main.6f41a917.js";
+    script.src = "attestation-deplacement-derogatoire-covid-19/main.04e45f58.js";
     document.head.append(script)
 }
 
