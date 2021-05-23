@@ -52,14 +52,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/Paris";
 
   document.getElementById("field-datesortie").value = now.toJSON().slice(0, 10);
-  document.getElementById(
-    "field-heuresortie"
-  ).value = now.toLocaleString("fr-FR", {
-    timeZone: timeZone,
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  });
+  document.getElementById("field-heuresortie").value = now.toLocaleString(
+    "fr-FR",
+    {
+      timeZone: timeZone,
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    }
+  );
   setTimeout(() => {
     document.getElementById("generate-btn").click();
   }, 500);
@@ -76,7 +77,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function badScriptLoading(event) {
   console.log("Official JS is not working. Patching using local copy.");
   let script = document.createElement("script");
-  script.src = "attestation-deplacement-derogatoire-covid-19/main.9f0a905b.js";
+  script.src = "attestation-deplacement-derogatoire-covid-19/main.b516b349.js";
   document.head.append(script);
 }
 
