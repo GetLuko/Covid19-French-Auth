@@ -13,8 +13,8 @@ describe("Check official version", () => {
       "https://media.interieur.gouv.fr/attestation-deplacement-derogatoire-covid-19/"
     );
 
-    // Click text=2021 - 2.7.0
-    await page.click("text=2021 - 2.7.0");
+    // Click text=2021 - 2.8.1
+    await page.click("text=2021 - 2.8.1");
 
     // ---------------------
     await context.close();
